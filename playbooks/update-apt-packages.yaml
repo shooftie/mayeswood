@@ -1,6 +1,7 @@
 ---
-- name: Update and upgrade apt packages
-  hosts: all
+- hosts: all
   tasks:
-    - upgrade: yes
-      upgrade_cache: yes
+    - name: update and upgrade apt packages
+      apt:
+        upgrade: yes
+        upgrade_cache: yes
